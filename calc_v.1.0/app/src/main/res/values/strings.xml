@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Test_application</string>
+
+    <string name="button_plus">+</string>
+    <string name="button_minus">-</string>
+    <string name="button_devide">/</string>
+    <string name="button_multiply">*</string>
+
+    <string name="pi">π</string>
+    <string name="e">e</string>
+    <string name="C">C</string>
+    <string name="delete">del</string>
+
+    <string name="zero">0</string>>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+
+    <string name="number_pi">3,1416</string>
+    <string name="number_e">2,7183</string>
+
+    <string name="degree">x^y</string>
+    <string name="factorial">n!</string>
+    <string name="equals">=</string>
+    <string name="sqrt">sqrt</string>
+    <string name="mod">mod</string>
+    <string name="comma">,</string>
+
+    <string name="text_result">1000</string>
+</resources>
