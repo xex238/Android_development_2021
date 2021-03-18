@@ -1,0 +1,2 @@
+        //Bundle args = intent.getBundleExtra("Q");
+        //q = (ArrayList<Question>) args.getSerializable("ARRAYLIST");

@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Lab_2_questionnaire_v.1.0</string>
+
+    <string name="title_string">Опросники</string>
+    <string name="questionaire_1">Опросник по аниме "Блич"</string>
+    <string name="questionaire_2">Кто хочет стать миллионером</string>
+    <string name="results">Результаты</string>
+
+    <string name="variant1">Вариант №1</string>
+    <string name="variant2">Вариант №2</string>
+    <string name="variant3">Вариант №3</string>
+    <string name="variant4">Вариант №4</string>
+
+    <string name="return_button">Возврат</string>
+    <string name="question">Вопрос №:</string>
+    <string name="back">Назад</string>
+    <string name="forward">Вперёд</string>
+    <string name="previous">Предыдущий</string>
+    <string name="next">Следующий</string>
+    <string name="complete_questionaire">Завершить опрос</string>
+
+    <string name="results_text">Результаты опросов</string>
+    <string name="questionaire_pass">Пройден ли опрос</string>
+    <string name="questionaire_true_answers">Количество правильных ответов</string>
+    <string name="qusetionaire_scores">Количество набранных баллов</string>
+
+    <string name="no">Нет</string>
+</resources>
