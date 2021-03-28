@@ -1,0 +1,14 @@
+<resources>
+    <string name="app_name">Lab_3_RSS_parser_v10</string>
+
+    <string name="get_news"><b>Вывести новости</b></string>
+    <string name="get_news2"><b>Вывести %1$s новости</b></string>
+    <string name="rss_template">
+        <![CDATA[ <b>%1$s</b>\n <u>%2$s</u>\n %3$s ]]>
+    </string>
+    <string name="rss_template2">
+        <b>%1$s</b>\n
+        <u>%2$s</u>\n
+        %3$s
+    </string>
+</resources>
