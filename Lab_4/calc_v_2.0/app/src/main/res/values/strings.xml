@@ -1,0 +1,62 @@
+<resources>
+    <string name="app_name">Calculator (v. 2.0)</string>
+    <string name="calc">Калькулятор</string>
+    <string name="reg_calc_info">1) Простейший калькулятор, предназначенный для выполнения только ординарных арифметических расчётов. Имеет минимальное число функций (как правило, только арифметические операции и, возможно, одна-две функции, такие, как извлечение квадратного корня, обратная функция, смена знака или вычисление процентов). Не поддерживают представление чисел с плавающей запятой.</string>
+    <string name="eng_calc_info">2) Инженерный (научный) калькулятор предназначен для научных и инженерных расчётов различной степени сложности. Ориентированы на научных работников, инженеров, студентов технических специальностей и старших школьников.</string>
+
+    <string name="regular_calculator">Обычный</string>
+    <string name="engineering_calculator">Инженерный</string>
+    
+    <string name="button_plus">+</string>
+    <string name="button_minus">-</string>
+    <string name="button_devide">/</string>
+    <string name="button_multiply">*</string>
+
+    <string name="pi">π</string>
+    <string name="e">e</string>
+    <string name="C">C</string>
+    <string name="delete">del</string>
+
+    <string name="zero">0</string>>
+    <string name="one">1</string>
+    <string name="two">2</string>
+    <string name="three">3</string>
+    <string name="four">4</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+
+    <string name="number_pi">3,1416</string>
+    <string name="number_e">2,7183</string>
+
+    <string name="reverse_number">1/x</string>
+    <string name="degree_2">x^2</string>
+    <string name="ten_degree_x">10^x</string>
+    <string name="lg">lg</string>
+    <string name="ln">ln</string>
+    <string name="log">log</string>
+    <string name="sin">sin</string>
+    <string name="cos">cos</string>
+    <string name="tg">tg</string>
+    <string name="ctg">ctg</string>
+    
+    <string name="degree">x^y</string>
+    <string name="factorial">n!</string>
+    <string name="equals">=</string>
+    <string name="sqrt">sqrt</string>
+    <string name="mod">mod</string>
+    <string name="comma">,</string>
+
+    <string name="text_result">1000</string>
+    <string name="title_activity_main2">MainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+</resources>
