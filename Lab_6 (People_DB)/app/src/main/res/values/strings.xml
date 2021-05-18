@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">People DB</string>
+
+    <string name="list_view_item">
+        <b>Имя: %1$s</b>\n
+        <u>Фамилия: %2$s</u>\n
+    </string>
+    <string name="list_view_item2">%1$s %2$s</string>
+
+    <string name="main_text">Введите данные для вставки/удаления/обновления</string>
+    <string name="insert">insert</string>
+    <string name="delete">delete</string>
+    <string name="view">view</string>
+    <string name="show">show</string>
+    <string name="back">back</string>
+    <string name="update">update</string>
+
+    <string name="write_new_values">Введите новые значения</string>
+
+    <string name="success_insert">Запись успешно добавлена</string>
+    <string name="fail_insert">Произошла ошибка при добавлении записи</string>
+    <string name="success_delete">Запись успешно удалена</string>
+    <string name="fail_delete">Произошла ошибка при удалении записи</string>
+    <string name="success_view">Записи успешно отображены</string>
+    <string name="fail_view">Произошла ошибка при выборе записей из базы данных</string>
+    <string name="success_show">Записи успешно отображены</string>
+    <string name="fail_show">Произошла ошибка при выборе записей из базы данных</string>
+    <string name="success_update">Запись успешно обновлена</string>
+    <string name="fail_update">Произошла ошибка при обновлении записи</string>
+</resources>
