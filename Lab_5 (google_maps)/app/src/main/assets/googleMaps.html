@@ -1,0 +1,97 @@
+<!--
+	В этом файле хранятся описания функций и переменных, требуемых
+	для установления координат объекта с помощью Google Maps API v.3.
+	
+	Объект можно искать либо по адресу, либо с помощью предварительно
+	заданных координат. В первом случае используется функция searchAddress, а
+	во втором - searchLatLng.
+	
+	Независимо от способа поиска объекта, на карте будет отображаться маркер,
+	показывающий текущее местоположение объекта. Маркер можно перемещать по карте,
+	уточняя таким образом местоположение.
+	
+	Координаты хранятся в глобальной переменной objectMarker (свойство "position").
+-->
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=win-1251"/>
+		<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"> 
+		</script>
+    <script type="text/javascript">
+		
+		//------------------------Глобальные переменные---------------------------//  
+		var map;
+		var geocoder;
+		var objectMarker;		
+		//------------------------------------------------------------------------//
+		
+
+		//-------------------------Поисковые функции------------------------------//
+		function searchAddress(address) {						
+			geocoder.geocode(
+				{ 'address': address}, function(results, status) {
+					if (status == google.maps.GeocoderStatus.OK) {
+						map.setZoom(15);
+						map.setCenter(results[0].geometry.location);						
+						objectMarker.position = results[0].geometry.location;
+						objectMarker.title = 'Координаты объекта: '
+							+ objectMarker.position.toString();							
+					}
+				});			
+			}
+		
+		function searchLatLng(latitude, longitude) {
+			var coords = new google.maps.LatLng(latitude,longitude);
+			map.setZoom(15);
+			map.setCenter(coords);
+			objectMarker.position = coords;
+			objectMarker.title = 'Координаты объекта: '
+				+ objectMarker.position.toString();	
+		}		
+		//------------------------------------------------------------------------//
+		
+		
+  	//------------------------Начальные настройки-----------------------------//
+    function initialize() {			
+			var latlng = new google.maps.LatLng(55.764213, 37.617187);
+			var options = { 
+				zoom: 15, 
+				center: latlng, 
+				mapTypeId: google.maps.MapTypeId.ROADMAP 
+			}; 
+			map = new google.maps.Map(document.getElementById("map"), options);
+			geocoder = new google.maps.Geocoder();			
+			objectMarker = new google.maps.Marker({
+							map: map,
+							position: latlng,
+							draggable: true,
+							icon: 'images/markerMIX.png',
+							title: 'Координаты объекта: ' + latlng.toString()
+							});
+			google.maps.event.addListener(objectMarker, 'dragend', function() {
+				objectMarker.title = 'Координаты объекта: '
+					+ objectMarker.position.toString();	
+			});			
+    }
+    //------------------------------------------------------------------------//
+    </script>
+  </head>
+	<body onload="initialize()">      	
+		<div id="map" style="position:absolute; width: 102%; height: 100%;
+			margin: 0px; padding: 0px; top: 0px; left:0px; right:0px;">
+		</div>
+		
+    <noscript>
+			<b style="font-family:Tahoma;">
+				JavaScript должен быть включен для использования Google Maps.
+			</b><br>
+			<p style="font-family:Tahoma;font-size:8pt;">
+				Это сообщение показывает, что JavaScript либо выключен,
+				либо не поддерживается Вашим Интернет-браузером.<br>
+				Включите JavaScript в настройках браузера и попробуйте
+				снова загрузить эту страницу.
+			</p>
+    </noscript>	
+  </body>
+</html>
+
