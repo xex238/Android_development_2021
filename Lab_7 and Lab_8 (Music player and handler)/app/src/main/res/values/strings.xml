@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Media_player</string>
+
+    <string name="item_MusicList">%1$s) %2$s - %3$s</string>
+
+    <string name="play">play</string>
+    <string name="pause">pause</string>
+    <string name="next"><![CDATA[>]]></string>
+    <string name="previous"><![CDATA[<]]></string>
+</resources>
