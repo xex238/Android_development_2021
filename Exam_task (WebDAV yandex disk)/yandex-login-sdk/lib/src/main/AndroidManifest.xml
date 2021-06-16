@@ -1,0 +1,64 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.yandex.authsdk">
+
+    <queries>
+        <intent>
+            <action android:name="com.yandex.auth.action.YA_SDK_LOGIN" />
+        </intent>
+    </queries>
+
+    <application>
+
+        <activity
+            android:label=""
+            android:name="com.yandex.authsdk.internal.AuthSdkActivity"
+            android:theme="@style/Theme.AuthSdk.Transparent" />
+
+        <activity
+            android:name="com.yandex.authsdk.internal.BrowserLoginActivity"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name="com.yandex.authsdk.internal.WebViewLoginActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize"
+            android:theme="@style/Theme.AuthSdk" />
+
+        <activity
+            android:name="com.yandex.authsdk.internal.BrowserDataActivity"
+            android:theme="@style/Theme.AuthSdk.Transparent">
+
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="yx${YANDEX_CLIENT_ID}.${YANDEX_OAUTH_HOST}"
+                    android:path="/auth/finish"
+                    android:scheme="https" />
+            </intent-filter>
+
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:path="/auth/finish"
+                    android:scheme="yx${YANDEX_CLIENT_ID}"
+                    tools:ignore="GoogleAppIndexingUrlError" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.yandex.auth.CLIENT_ID"
+            android:value="${YANDEX_CLIENT_ID}" />
+
+        <meta-data
+            android:name="com.yandex.auth.OAUTH_HOST"
+            android:value="${YANDEX_OAUTH_HOST}" />
+    </application>
+</manifest>

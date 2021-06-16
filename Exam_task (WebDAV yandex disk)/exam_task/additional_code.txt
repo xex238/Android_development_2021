@@ -1,0 +1,80 @@
+// Зависимости для AndroidManifest
+
+    <groupId>com.pethoalpar</groupId>
+    <artifactId>sardineExample</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.github.lookfirst</groupId>
+            <artifactId>sardine</artifactId>
+            <version>5.7</version>
+        </dependency>
+    </dependencies>
+
+// Попытка использования Android SDK
+        mavenCentral();
+
+    protected void Initialization()
+    {
+        // Инициализация
+        YandexAuthSdk sdk = new YandexAuthSdk(getContext(), new YandexAuthOptions(getContext(), true));
+
+        // Запуск авторизации
+        startActivityForResult(sdk.createLoginIntent(context, scopes), REQUEST_CODE_YA_LOGIN);
+    }
+
+    // Переопределение метода
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if (requestCode == REQUEST_LOGIN_SDK) {
+            try {
+                final YandexAuthToken yandexAuthToken = sdk.extractToken(resultCode, data);
+                if (yandexAuthToken != null) {
+                    // Success auth
+                }
+            } catch (YandexAuthException e) {
+                // Process error
+            }
+            return;
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+
+
+
+
+
+    // Попытка №3. Использование пакета: https://github.com/yandexmobile/yandex-login-sdk-android
+    // + инструкция: https://yandex.ru/dev/mobileauthsdk/doc/sdk/concepts/android/2.3.0/sdk-android-install.html
+    // Проблема: Ошибка при инициализации - при добавлении в build.gradle YANDEX_CLIENT_ID возникает ошибка
+    /*
+    protected void Initialization()
+    {
+        // Инициализация
+        YandexAuthSdk sdk = new YandexAuthSdk(getContext(), new YandexAuthOptions(getContext(), true));
+
+        // Запуск авторизации
+        startActivityForResult(sdk.createLoginIntent(context, scopes), REQUEST_CODE_YA_LOGIN);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data)
+    {
+        if (requestCode == REQUEST_LOGIN_SDK)
+        {
+            try {
+                final YandexAuthToken yandexAuthToken = sdk.extractToken(resultCode, data);
+                if (yandexAuthToken != null)
+                {
+                    // Success auth
+                }
+            } catch (YandexAuthException e)
+            {
+                // Process error
+            }
+            return;
+        }
+        super.onActivityResult(requestCode, resultCode, data);
+    }
+    */
